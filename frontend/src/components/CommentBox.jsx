@@ -49,7 +49,7 @@ const CommentBox = ({ selectedBlog }) => {
         const getAllCommentsOfBlog = async () => {
             try {
                 // eslint-disable-next-line react/prop-types
-                const res = await axios.get(`http://localhost:8000/api/v1/comment/${selectedBlog._id}/comment/all`)
+                const res = await axios.get(`https://mern-blog-1-xmci.onrender.com/api/v1/comment/${selectedBlog._id}/comment/all`)
                 const data = res.data.comments
                 dispatch(setComment(data))
             } catch (error) {
@@ -64,7 +64,7 @@ const CommentBox = ({ selectedBlog }) => {
         try {
             const res = await axios.post(
                 // eslint-disable-next-line react/prop-types
-                `http://localhost:8000/api/v1/comment/${selectedBlog._id}/create`,
+                `https://mern-blog-1-xmci.onrender.com/api/v1/comment/${selectedBlog._id}/create`,
                 { content },
                 {
                     headers: { "Content-Type": "application/json" },
@@ -98,7 +98,7 @@ const CommentBox = ({ selectedBlog }) => {
     const replyHandler = async (commentId) => {
         try {
             const res = await axios.post(
-                `http://localhost:8000/api/v1/comment/${commentId}/reply`,
+                `https://mern-blog-1-xmci.onrender.com/api/v1/comment/${commentId}/reply`,
                 { content: replyText },
                 {
                     headers: { "Content-Type": "application/json" },
@@ -125,7 +125,7 @@ const CommentBox = ({ selectedBlog }) => {
 
     const deleteComment = async (commentId) => {
         try {
-            const res = await axios.delete(`http://localhost:8000/api/v1/comment/${commentId}/delete`, {
+            const res = await axios.delete(`https://mern-blog-1-xmci.onrender.com/api/v1/comment/${commentId}/delete`, {
                 withCredentials: true
             })
             if (res.data.success) {
@@ -142,7 +142,7 @@ const CommentBox = ({ selectedBlog }) => {
     const editCommentHandler = async (commentId) => {
         try {
             const res = await axios.put(
-                `http://localhost:8000/api/v1/comment/${commentId}/edit`,
+                `https://mern-blog-1-xmci.onrender.com/api/v1/comment/${commentId}/edit`,
                 { content: editedContent },
                 {
                     withCredentials: true,
@@ -168,7 +168,7 @@ const CommentBox = ({ selectedBlog }) => {
     const likeCommentHandler = async (commentId) => {
         try {
             const res = await axios.get(
-                `http://localhost:8000/api/v1/comment/${commentId}/like`,
+                `https://mern-blog-1-xmci.onrender.com/api/v1/comment/${commentId}/like`,
                 { withCredentials: true }
             );
 
