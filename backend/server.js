@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
 
 app.use(cors({
-  origin: [process.env.CLIENT_URL, "http://localhost:3000"],
+  origin: [process.env.CLIENT_URL, "https://mern-blog-mjsf.vercel.app"],
   credentials: true
 }));
 
