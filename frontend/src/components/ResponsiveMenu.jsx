@@ -1,10 +1,8 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import { FaUserCircle } from "react-icons/fa";
-import { FaChevronRight } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
-import UserLogo from "../assets/user.jpg"
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Avatar, AvatarImage } from './ui/avatar';
 import { useSelector } from 'react-redux';
 
 const ResponsiveMenu = ({ openNav, setOpenNav, logoutHandler }) => {
@@ -39,7 +37,7 @@ const ResponsiveMenu = ({ openNav, setOpenNav, logoutHandler }) => {
             </div>
             <div className='pb-20'>
                 <h1>
-                    Made with ❤️ by Rohit
+                    Made with ❤️ by Sahil
                 </h1>
             </div>
         </div>
